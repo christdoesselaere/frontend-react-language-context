@@ -10,7 +10,7 @@ function AllPlants() {
       <h2>{content[activeLanguage].plants.title}</h2>
       <p>{content[activeLanguage].plants.text}</p>
       <ul>
-        {content[activeLanguage].plants.plants.map((plant) => <li>{plant}</li>)}
+        {content[activeLanguage].plants.plants.map((plant) => <li key={plant}>{plant}</li>)}
       </ul>
     </div>
   );
