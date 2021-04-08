@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
     BrowserRouter as Router,
     Switch,
@@ -11,10 +11,10 @@ import AllPlants from './pages/allPlants/AllPlants';
 import {LanguageContext} from "./context/LanguageContext";
 
 function App() {
-    const data = {test: "Ik ben zichtbaar!",};
+        const [language, toggleLanguage] = useState('nl')
 
     return (
-        <LanguageContext.Provider value={data}>
+        <LanguageContext.Provider value={language}>
             <Router>
                 <Header/>
                 <Switch>
