@@ -11,7 +11,11 @@ import AllPlants from './pages/allPlants/AllPlants';
 import {LanguageContext} from "./context/LanguageContext";
 
 function App() {
-        const [language, toggleLanguage] = useState('nl')
+    const [language, toggleLanguage] = useState('nl')
+
+    function setLanguage() {
+        toggleLanguage(language === 'nl' ? 'es' : 'nl')
+    }
 
     return (
         <LanguageContext.Provider value={language}>
