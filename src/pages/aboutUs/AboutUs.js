@@ -5,13 +5,13 @@ import {LanguageContext} from "../../context/LanguageContext";
 
 function AboutUs() {
     const {activeLanguage} = useContext(LanguageContext);
+
     return (
         <div className="page-container">
             {activeLanguage && console.log(activeLanguage)}
-            <h2>{content.nl.aboutUs.title}</h2>
-            <p>Dit is je profielpagina!</p>
+            <h2>{content[activeLanguage].aboutUs.title}</h2>
             <img src={writers} alt="Bob & Betsy"/>
-            <p>{content.nl.aboutUs.writers}</p>
+            <p>{content[activeLanguage].aboutUs.writers}</p>
         </div>
     );
 }
