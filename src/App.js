@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
     BrowserRouter as Router,
     Switch,
@@ -8,22 +8,9 @@ import Header from './components/header/Header';
 import Home from './pages/home/Home';
 import AboutUs from './pages/aboutUs/AboutUs';
 import AllPlants from './pages/allPlants/AllPlants';
-import {LanguageContext} from "./context/LanguageContext";
 
 function App() {
-    const [language, toggleLanguage] = useState('nl')
-
-    function changeLanguage() {
-        toggleLanguage(language === 'nl' ? 'es' : 'nl')
-    }
-
-    const data = {
-        activeLanguage: language,
-        changeLanguageFunction: changeLanguage,
-    }
-
     return (
-        <LanguageContext.Provider value={data}>
             <Router>
                 <Header/>
                 <Switch>
@@ -38,7 +25,6 @@ function App() {
                     </Route>
                 </Switch>
             </Router>
-        </LanguageContext.Provider>
     );
 }
 
