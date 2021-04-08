@@ -41,6 +41,10 @@ nav a:link {
     text-decoration: none;
 }
 
+.home-button {
+    width: 24px;
+}
+
 
 .image-container h1 {
     position: absolute;

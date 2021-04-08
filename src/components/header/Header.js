@@ -2,10 +2,11 @@ import React, {useContext} from 'react';
 import {NavLink} from 'react-router-dom';
 import headerImage from '../../assets/wall-with-plants.jpg';
 import {ReactComponent as FlagNL} from '../../assets/netherlands.svg';
-import {ReactComponent as FlagES} from "../../assets/spain.svg";
+import {ReactComponent as FlagES} from '../../assets/spain.svg';
 import content from '../../data/content.json';
 import './Header.css';
 import {LanguageContext} from "../../context/LanguageContext";
+import homeButton from '../../assets/home.png';
 
 function Header() {
     const {activeLanguage} = useContext(LanguageContext);
@@ -18,7 +19,7 @@ function Header() {
                     <ul>
                         <li>
                             <NavLink exact to="/">
-                                Home
+                                <img src={homeButton} alt="home" className="home-button"/>
                             </NavLink>
                         </li>
                         <li>
