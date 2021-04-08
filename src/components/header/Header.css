@@ -16,6 +16,11 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 
 nav ul {
@@ -24,7 +29,7 @@ nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-basis: 500px;
+    flex-basis: 650px;
     flex-shrink: 1;
     margin: 0 30px;
 }
@@ -52,6 +57,10 @@ nav a:link {
     display: block;
     width: 30px;
     margin-left: 10px;
+}
+
+.language-switch:hover {
+    cursor: pointer;
 }
 
 .active {
