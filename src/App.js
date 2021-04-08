@@ -12,6 +12,7 @@ import {LanguageContext} from "./content/LanguageContext";
 
 function App() {
   return (
+      <LanguageContext.Provider value={}>
     <Router>
         <Header />
         <Switch>
@@ -26,6 +27,7 @@ function App() {
           </Route>
         </Switch>
     </Router>
+      </LanguageContext.Provider>
   );
 }
 
