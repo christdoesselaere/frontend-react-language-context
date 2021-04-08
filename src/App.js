@@ -8,6 +8,7 @@ import Header from './components/header/Header';
 import Home from './pages/home/Home';
 import AboutUs from './pages/aboutUs/AboutUs';
 import AllPlants from './pages/allPlants/AllPlants';
+import {LanguageContext} from "./content/LanguageContext";
 
 function App() {
   return (
