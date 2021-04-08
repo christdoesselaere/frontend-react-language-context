@@ -11,7 +11,7 @@ import AllPlants from './pages/allPlants/AllPlants';
 import {LanguageContext} from "./context/LanguageContext";
 
 function App() {
-    const data = {test: "test",};
+    const data = {test: "Ik ben zichtbaar!",};
 
     return (
         <LanguageContext.Provider value={data}>
