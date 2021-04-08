@@ -4,11 +4,10 @@ import content from '../../data/content.json';
 import {LanguageContext} from "../../context/LanguageContext";
 
 function AboutUs() {
-    const {test} = useContext(LanguageContext);
+    const {activeLanguage} = useContext(LanguageContext);
     return (
         <div className="page-container">
-            <p>{test}</p>
-            {test && console.log(test)}
+            {activeLanguage && console.log(activeLanguage)}
             <h2>{content.nl.aboutUs.title}</h2>
             <p>Dit is je profielpagina!</p>
             <img src={writers} alt="Bob & Betsy"/>
