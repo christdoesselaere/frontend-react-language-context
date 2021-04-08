@@ -8,7 +8,6 @@ function AboutUs() {
 
     return (
         <div className="page-container">
-            {activeLanguage && console.log(activeLanguage)}
             <h2>{content[activeLanguage].aboutUs.title}</h2>
             <img src={writers} alt="Bob & Betsy"/>
             <p>{content[activeLanguage].aboutUs.writers}</p>
