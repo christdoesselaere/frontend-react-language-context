@@ -13,12 +13,17 @@ import {LanguageContext} from "./context/LanguageContext";
 function App() {
     const [language, toggleLanguage] = useState('nl')
 
-    function setLanguage() {
+    function changeLanguage() {
         toggleLanguage(language === 'nl' ? 'es' : 'nl')
     }
 
+    const data = {
+        activeLanguage: language,
+        changeLanguageFunction: changeLanguage,
+    }
+
     return (
-        <LanguageContext.Provider value={language}>
+        <LanguageContext.Provider value={data}>
             <Router>
                 <Header/>
                 <Switch>
